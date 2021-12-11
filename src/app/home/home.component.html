@@ -1,0 +1,77 @@
+<section>
+  <div>
+    <a [routerLink]="['/home']" class="header-desc"
+      ><span class="header-title">VIDEO</span>VIDEO GAMES</a
+    >
+    <a [routerLink]="['/contact']" class="header-desc">CONTACT</a>
+  </div>
+</section>
+<section>
+  <nav>
+    <div class="cd-filter">
+      <form>
+        <label>Name(Content)</label>
+        <input
+          type="text"
+          #name
+          name="nameSearch"
+          [(ngModel)]="nameSearch"
+          placeholder="Text String"
+        />
+        <div>
+          <label>Minimum Score</label>
+          <input
+            type="number"
+            max="9"
+            min="0"
+            name="ratingSearch"
+            [(ngModel)]="ratingSearch"
+            placeholder="1-10"
+          />
+        </div>
+        <div>
+          <label>Order By</label>
+          <div class="select">
+            <span class="input-group-addon"> </span>
+            <select #sel (change)="changed(sel.value)">
+              <option value="releaseSort">Release Date</option>
+              <option value="scoreSort">Score</option>
+              <option value="nameSort">Name</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <input
+            type="submit"
+            (click)="nameSearch = ' '; ratingSearch = 0"
+            value="Clear"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- cd-filter -->
+  </nav>
+
+  <main>
+    <!-- <div *ngFor="let sortedItem of sortedItems">
+<p>{{sortedItem.name}}</p>
+</div> -->
+    <div
+      class="card row"
+      *ngFor="let game of games | personSearch: nameSearch:ratingSearch"
+    >
+      <!--    <div class="card row" *ngFor="let game of games">  -->
+      <span class="notify-badge">{{ game.rating | homeIni }}</span>
+      <div class="col-2 avatar"></div>
+
+      <div class="container col-10" style="background-color: #0e1a2b">
+        <h4>
+          <b>{{ game.name }}</b>
+        </h4>
+        <p>Release date: {{ game.first_release_date | date: 'dd-MM-yyyy' }}</p>
+        <p>{{ game.summary | truncate: [220, '...'] }}</p>
+      </div>
+    </div>
+  </main>
+</section>

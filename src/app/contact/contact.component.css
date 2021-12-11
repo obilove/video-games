@@ -1,0 +1,209 @@
+/* Importing the Roboto font from Google Fonts. */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+/* Set font of all elements to 'Roboto' */
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+label {
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header-title {
+  color: #ffffff47;
+  font-weight: 700;
+  font-size: 30px;
+  position: absolute;
+  top: -15px;
+  left: -10px;
+}
+
+.header-desc {
+  color: #ffffff;
+  font-size: 19px;
+  position: relative;
+  font-weight: 700;
+  margin: 10px;
+}
+
+section {
+  margin: 30px;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+.show-btn {
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3498db;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.show-btn,
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type='text'],
+input[type='number'],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: #182c47;
+  box-sizing: border-box;
+  color: #fff;
+  box-shadow: none;
+
+  outline: 0;
+  border: 0;
+}
+span {
+  color: #5692e8;
+}
+input[type='checkbox'] {
+  display: none;
+}
+.container {
+  width: 410px;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: block;
+}
+.container .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container .close-btn:hover {
+  color: #3498db;
+}
+.container .text {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.container form {
+  margin-top: 20px;
+}
+.container form .data {
+  /*  width: 100%; */
+  margin-top: 10px;
+}
+.form-set {
+  width: 410px;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #0e1a2b;
+}
+form .data label {
+  font-size: 18px;
+}
+form .data input {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+}
+form .data input:focus {
+  border-bottom-width: 2px;
+}
+form .forgot-pass {
+  margin-top: -8px;
+}
+form .forgot-pass a {
+  color: #3498db;
+  text-decoration: none;
+}
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+form .btn {
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  transition: all 0.4s;
+}
+form .btn:hover .inner {
+  left: 0;
+}
+form .btn button {
+  background-color: #5692e8;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+form .signup-link {
+  text-align: center;
+}
+form .signup-link a {
+  color: #3498db;
+  text-decoration: none;
+}
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+.form-group {
+  width: 100%;
+}
+.data-left {
+  float: left;
+  width: 50%;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+.data-right {
+  float: right;
+  width: 50%;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
