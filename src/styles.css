@@ -9,3 +9,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 600px) {
+  body {
+    min-height: 680px;
+  }
+}
